@@ -1,3 +1,5 @@
+#using ! for not null
+
 type Book {
     id: ID!
     title: String!
@@ -13,3 +15,4 @@ type Book {
     createdAt: String!
     updatedAt: String
 }
+

@@ -1,3 +1,4 @@
+#example books: [Book!]! => controller_function_name: [return_object]
 type Query {
     books: [Book!]!
     getById(id: ID!): Book

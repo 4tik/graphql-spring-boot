@@ -1,5 +1,5 @@
 #insert book
-input CreateBookInput {
+input BookPayload {
     title: String!
     author: String!
     price: Float!
@@ -12,21 +12,8 @@ input CreateBookInput {
     stockQuantity: Int
 }
 
-#update book
-input UpdateBookInput {
-    title: String
-    author: String
-    price: Float
-    isbn: String
-    publisher: String
-    publicationDate: String
-    category: String
-    language: String
-    totalPage: Int
-    stockQuantity: Int
-}
-
 type Mutation {
-    createBook(input: CreateBookInput!): Book
-    updateBook(id: ID!, input: UpdateBookInput!): Book
+    create(input: BookPayload!): Book
+    update(id: ID!, input: BookPayload!): Book
+    deleteById(id: ID!): Boolean!
 }
