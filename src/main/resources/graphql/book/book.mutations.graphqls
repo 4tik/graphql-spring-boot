@@ -1,0 +1,32 @@
+#insert book
+input CreateBookInput {
+    title: String!
+    author: String!
+    price: Float!
+    isbn: String!
+    publisher: String
+    publicationDate: String
+    category: String
+    language: String
+    totalPage: Int
+    stockQuantity: Int
+}
+
+#update book
+input UpdateBookInput {
+    title: String
+    author: String
+    price: Float
+    isbn: String
+    publisher: String
+    publicationDate: String
+    category: String
+    language: String
+    totalPage: Int
+    stockQuantity: Int
+}
+
+type Mutation {
+    createBook(input: CreateBookInput!): Book
+    updateBook(id: ID!, input: UpdateBookInput!): Book
+}

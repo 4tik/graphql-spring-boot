@@ -1,0 +1,15 @@
+type Book {
+    id: ID!
+    title: String!
+    author: String!
+    price: Float
+    isbn: String!
+    publisher: String
+    publicationDate: String
+    category: String
+    language: String
+    totalPage: Int
+    stockQuantity: Int
+    createdAt: String!
+    updatedAt: String
+}
